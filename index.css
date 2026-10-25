@@ -3699,3 +3699,143 @@ body {
   bottom: 20px;
   z-index: 9999;
 }
+
+/* MOBILE FIX: Hide the next section behind the opening screen */
+@media screen and (max-width: 768px) {
+  #envelopeIntro {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 0 !important;
+    max-height: 100dvh !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  #envelopeIntro + section {
+    margin-top: 0 !important;
+  }
+}
+
+/* Mobile envelope size and alignment fix */
+@media screen and (max-width: 768px) {
+  #envelopeIntro .envelope-button {
+    width: min(88vw, 500px) !important;
+    max-width: 88vw !important;
+    transform: scale(1.05);
+    transform-origin: center center;
+  }
+
+  #envelopeIntro .envelope-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  #envelopeIntro {
+    gap: 18px;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+/* Make the opening invitation subtitle elegant and visible */
+#envelopeIntro .envelope-subtitle,
+#envelopeIntro .envelope-tagline,
+#envelopeIntro p {
+  color: #fff0e5 !important;
+  text-shadow:
+    0 1px 3px rgba(70, 20, 35, 0.45),
+    0 0 12px rgba(255, 220, 180, 0.25) !important;
+  opacity: 1 !important;
+}
+
+/* Mobile readability */
+@media screen and (max-width: 768px) {
+  #envelopeIntro .envelope-subtitle,
+  #envelopeIntro .envelope-tagline,
+  #envelopeIntro p {
+    color: #fff4eb !important;
+    text-shadow: 0 2px 8px rgba(60, 15, 30, 0.5) !important;
+  }
+}
+
+/* Fix overlapping text around the envelope button */
+#envelopeIntro .envelope-open-link {
+  position: relative !important;
+  z-index: 20 !important;
+  margin-top: 20px !important;
+}
+
+/* Keep the subtitle readable */
+#envelopeIntro .envelope-subtitle,
+#envelopeIntro .envelope-tagline {
+  color: #fff4eb !important;
+  opacity: 1 !important;
+  text-shadow: 0 2px 8px rgba(60, 15, 30, 0.4) !important;
+}
+
+/* Mobile: enlarge envelope and reduce visible back-card strip */
+@media screen and (max-width: 768px) {
+  #envelopeIntro .envelope-button {
+    width: 88vw !important;
+    max-width: 500px !important;
+    transform: scale(1.08) !important;
+    transform-origin: center center !important;
+  }
+
+  #envelopeIntro .envelope-back {
+    transform: translateY(-3px) !important;
+  }
+}
+
+/* Fix extra white strip behind envelope */
+@media screen and (max-width: 768px) {
+  #envelopeIntro .envelope-back {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  #envelopeIntro .envelope-button {
+    width: 88vw !important;
+    max-width: 500px !important;
+  }
+}
+
+
+
+/* Mobile envelope card positioning */
+@media screen and (max-width: 768px) {
+  #envelopeIntro .envelope-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    transform: translateY(-18px) !important;
+  }
+}
+
+
+/* FIX: Keep the inner invitation card inside the envelope */
+.envelope-button > .envelope-card {
+  transform: translateY(0);
+}
+
+/* Fix: Keep footer text below the invitation button */
+#envelopeIntro .envelope-footer {
+  position: relative !important;
+  z-index: 0 !important;
+  margin-top: 12px !important;
+}
+
+#envelopeIntro .envelope-open-link {
+  position: relative !important;
+  z-index: 5 !important;
+}
+#envelopeIntro .envelope-footer {
+  visibility: hidden !important;
+}
