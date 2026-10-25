@@ -3672,3 +3672,30 @@ body {
   color: #fff4e8;
   transform: translateY(3px) rotate(4deg);
 }
+
+/* Fix: Opening screen should fill the viewport */
+#envelopeIntro {
+  min-height: 100vh;
+  height: 100svh;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* Keep the envelope content centered */
+#envelopeIntro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Keep music button visible on the opening screen */
+.music-toggle,
+#musicToggle,
+.music-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+}
