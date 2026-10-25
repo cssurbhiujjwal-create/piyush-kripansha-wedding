@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#5a2633" />
+
+  <title>Piyush & Kripansha | Wedding Invitation</title>
+
+  <meta
+    name="description"
+    content="Join us to celebrate the wedding of Piyush and Kripansha."
+  />
+
+  <!-- Elegant fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+<!-- Falling Rose Petals -->
+<div class="petal-container" id="petalContainer"
+     aria-hidden="true"></div>
+
+<!-- WEDDING INVITATION ENVELOPE INTRO -->
+<section class="envelope-intro" id="envelopeIntro"
+  aria-label="Open the wedding invitation">
+
+  <div class="envelope-heading">
+    <span class="envelope-kicker">A LITTLE SOMETHING SPECIAL</span>
+    <p class="envelope-message">An invitation to celebrate love</p>
+  </div>
+
+  <button
+    class="envelope-button"
+    id="openInvitation"
+    type="button"
+    aria-label="Open Piyush and Kripansha's wedding invitation"
+  >
+    <span class="envelope-shadow"></span>
+
+    <span class="envelope-card">
+      <span class="card-small-text">YOU ARE INVITED TO THE WEDDING OF</span>
+      <span class="card-script">Piyush</span>
+      <span class="card-amp">&</span>
+      <span class="card-script">Kripansha</span>
+      <span class="card-bottom">WITH LOVE, ALWAYS ♡</span>
+    </span>
+
+    <span class="envelope-back"></span>
+    <span class="envelope-front"></span>
+
+    <span class="envelope-flap"></span>
+
+    <span class="envelope-seal">
+      <span>PK</span>
+    </span>
+  </button>
+
+  <button class="envelope-open-link"
+    id="openInvitationText" type="button">
+    OPEN YOUR INVITATION <span>↗</span>
+  </button>
+
+  <p class="envelope-footer">MADE WITH LOVE · PIYUSH & KRIPANSHA</p>
+
+</section>
+
+<!-- Background Music -->
+<audio id="weddingMusic" loop preload="none">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button
+  class="music-button"
+  id="musicToggle"
+  type="button"
+  aria-label="Play wedding music"
+  aria-pressed="false"
+>
+  ♫ <span id="musicLabel">Play Music</span>
+</button>
+
+  <!-- Opening Hero -->
+  <header class="hero" id="home">
+    <div class="hero-glow"></div>
+    <div class="hero-flower flower-one">✿</div>
+    <div class="hero-flower flower-two">❀</div>
+
+    <nav class="navbar">
+      <a href="#home" class="brand">P <span>♥</span> K</a>
+      <a href="#celebration" class="nav-link">Our Celebration</a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow reveal">TOGETHER WITH THEIR FAMILIES</p>
+
+      <p class="parents reveal">
+        Mr. Mahendra Jain & Mrs. Kamlesh Jain
+        <span class="parent-amp">&</span>
+        Mr. Trilok Jain & Mrs. Manorama Jain
+      </p>
+
+      <p class="invite-line reveal">
+        joyfully invite you to celebrate the wedding of
+      </p>
+
+      <div class="names-wrap">
+        <h1 class="couple-name">
+          <span class="name-piyush">Piyush</span>
+          <span class="name-amp">&</span>
+          <span class="name-kripansha">Kripansha</span>
+        </h1>
+      </div>
+
+      <div class="hero-divider">
+        <span></span> ♡ <span></span>
+      </div>
+
+      <p class="hero-date">A BEAUTIFUL BEGINNING</p>
+      <p class="hero-subtitle">Two hearts. One forever.</p>
+
+      <a href="#celebration" class="scroll-cue">
+        <span>SCROLL TO EXPLORE</span>
+        <span class="scroll-arrow">↓</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Welcome Section -->
+    <section class="welcome section-padding" id="celebration">
+      <div class="section-kicker">THE BEGINNING OF FOREVER</div>
+
+      <h2 class="section-title">
+        A celebration of <em>love</em>
+      </h2>
+
+      <div class="ornament">❦</div>
+
+      <p class="welcome-text">
+        With hearts full of love and gratitude, we invite you to join us
+        as we begin a beautiful new chapter together. Your presence will
+        make our special moments even more memorable.
+      </p>
+
+      <p class="script-signature">With love,<br />Piyush & Kripansha</p>
+    </section>
+
+
+<!-- SCRATCH TO REVEAL WEDDING COUNTDOWN -->
+<section class="countdown-section section-padding" id="countdown">
+
+  <p class="section-kicker">A LITTLE WEDDING SURPRISE</p>
+  <h2 class="section-title">Scratch to reveal <em>the Date</em></h2>
+
+  <p class="section-description">
+    A little surprise is waiting for you. Scratch the card to discover
+    how long until our beautiful beginning.
+  </p>
+
+  <div class="scratch-card" id="scratchCard">
+
+    <!-- The live countdown underneath -->
+    <div class="scratch-reveal" id="scratchReveal">
+
+<p class="wedding-date-label">OUR WEDDING DATE</p>
+<p class="wedding-date-display" id="weddingDateText">
+  04 December 2026
+</p>
+
+      <span class="scratch-heart">♡</span>
+      <p class="scratch-reveal-label">COUNTING DOWN TO FOREVER</p>
+
+      <div class="countdown-grid">
+        <div class="countdown-box">
+          <span id="days">000</span>
+          <small>Days</small>
+        </div>
+        <div class="countdown-box">
+          <span id="hours">00</span>
+          <small>Hours</small>
+        </div>
+        <div class="countdown-box">
+          <span id="minutes">00</span>
+          <small>Minutes</small>
+        </div>
+        <div class="countdown-box">
+          <span id="seconds">00</span>
+          <small>Seconds</small>
+        </div>
+      </div>
+
+      <p id="countdown-message" class="countdown-message">
+        Until Piyush & Kripansha's forever begins ♡
+      </p>
+    </div>
+
+    <!-- Scratchable surface -->
+    <canvas
+      id="scratchCanvas"
+      class="scratch-canvas"
+      aria-label="Scratch here to reveal the wedding countdown"
+      role="img"
+    ></canvas>
+
+    <div class="scratch-instruction" id="scratchInstruction">
+      <span class="scratch-star">✧</span>
+      <span class="scratch-title">A date to remember</span>
+      <span class="scratch-subtitle">♡ SCRATCH HERE ♡</span>
+      <span class="scratch-hand">✧</span>
+    </div>
+
+  </div>
+
+  <button class="scratch-reset" id="scratchReset" type="button">
+    ↻ Reveal again
+  </button>
+
+</section>
+
+
+    <!-- Couple Photo Feature -->
+    <section class="couple-feature section-padding">
+      <div class="feature-grid">
+        <div class="feature-image image-reveal">
+          <img
+            src="image1.png"
+            alt="Romantic wedding celebration"
+            loading="lazy"
+          />
+          <span class="image-caption">Our kind of forever</span>
+        </div>
+
+        <div class="feature-copy">
+          <p class="section-kicker">TWO SOULS, ONE STORY</p>
+          <h2 class="section-title">
+            And so, our <em>forever</em> begins.
+          </h2>
+          <p>
+            Some moments become memories. Some people become home.
+            And some stories deserve to be celebrated with everyone
+            we love.
+          </p>
+          <div class="small-ornament">♡</div>
+          <p class="script-signature">Piyush & Kripansha</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery-section section-padding" id="gallery">
+      <div class="section-kicker">LITTLE MOMENTS, BIG MEMORIES</div>
+      <h2 class="section-title">Our <em>Gallery</em></h2>
+      <p class="section-description">
+        A glimpse into the beautiful moments we want to remember forever.
+      </p>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item gallery-tall">
+          <img
+            src="image1.png"
+            alt="Wedding couple portrait"
+            loading="lazy"
+          />
+          <figcaption>Made for each other</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="image2.png"
+            alt="Wedding celebration"
+            loading="lazy"
+          />
+          <figcaption>Moments of joy</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="image3.jpeg"
+            alt="Romantic wedding details"
+            loading="lazy"
+          />
+          <figcaption></figcaption>
+        </figure>
+
+        <figure class="gallery-item gallery-wide">
+          <img
+            src="image4.jpeg"
+            alt="Beautiful wedding day"
+            loading="lazy"
+          />
+          <figcaption></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Wedding Functions -->
+    <section class="functions-section section-padding" id="functions">
+      <div class="section-kicker">SAVE THE DATES</div>
+      <h2 class="section-title">The Wedding <em>Festivities</em></h2>
+      <p class="section-description">
+        Four beautiful celebrations, one unforgettable beginning.
+      </p>
+
+      <div class="functions-grid">
+
+        <article class="function-card mandap-mayra">
+          <div class="function-icon">✿</div>
+          <p class="function-number">01 ·</p>
+          <h3>Mandap & Mayra</h3>
+          <p class="function-note">A joyful start to the wedding celebrations.</p>
+          <div class="function-rule"></div>
+
+          <div class="function-detail">
+            <span class="detail-label">DATE</span>
+            <span class="detail-value">04 December 2026</span>
+          </div>
+          <div class="function-detail">
+            <span class="detail-label">TIME</span>
+            <span class="detail-value">9:00 AM onwards</span>
+          </div>
+          <div class="function-detail">
+            <span class="detail-label">VENUE</span>
+            <span class="detail-value">Ranthambore Grand Mahal, Sawai Madhopur</span>
+          </div>
+        </article>
+
+        <article class="function-card ring-ceremony">
+          <div class="function-icon">❀</div>
+          <p class="function-number">02 · Ring Exchange</p>
+          <h3>Ring Ceremony</h3>
+          <p class="function-note">A promise, a ring, and a lifetime together.</p>
+          <div class="function-rule"></div>
+
+          <div class="function-detail">
+            <span class="detail-label">DATE</span>
+            <span class="detail-value">04 December 2026</span>
+          </div>
+          <div class="function-detail">
+            <span class="detail-label">TIME</span>
+            <span class="detail-value">01:00 PM onwards</span>
+          </div>
+          <div class="function-detail">
+            <span class="detail-label">VENUE</span>
+            <span class="detail-value">Ranthambore Grand Mahal, Sawai Madhopur</span>
+          </div>
+        </article>
+
+        <article class="function-card Haldi">
+          <div class="function-icon">✿</div>
+          <p class="function-number">03 · Haldi Ceremony</p>
+          <h3>Haldi Ceremony</h3>
+          <p class="function-note">A bright afternoon filled with colour and laughter.</p>
+          <div class="function-rule"></div>
+
+          <div class="function-detail">
+            <span class="detail-label">DATE</span>
+            <span class="detail-value">04 December 2026</span>
+          </div>
+          <div class="function-detail">
+            <span class="detail-label">TIME</span>
+            <span class="detail-value">02:00 PM onwards</span>
+          </div>
+          <div class="function-detail">
+            <span class="detail-label">VENUE</span>
+            <span class="detail-value">Ranthambore Grand Mahal, Sawai Madhopur</span>
+          </div>
+        </article>
+
+        <article class="function-card wedding">
+          <div class="function-icon">♡</div>
+          <p class="function-number">04 · THE BIG DAY</p>
+          <h3>The Wedding</h3>
+          <p class="function-note">Two families, two hearts, one forever.</p>
+          <div class="function-rule"></div>
+
+          <div class="function-detail">
+            <span class="detail-label">DATE</span>
+            <span class="detail-value">04 December 2026</span>
+          </div>
+          <div class="function-detail">
+            <span class="detail-label">TIME</span>
+            <span class="detail-value">09:00 PM onwards</span>
+          </div>
+          <div class="function-detail">
+            <span class="detail-label">VENUE</span>
+            <span class="detail-value">Ranthambore Grand Mahal, Sawai Madhopur</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+<!-- GOOGLE MAP VENUE SECTION -->
+<section class="venue-section" id="venue">
+  <div class="venue-container">
+    <p class="venue-kicker">WE CAN'T WAIT TO SEE YOU</p>
+    <h2 class="venue-title">Find Your Way</h2>
+
+    <p class="venue-description">
+      Join us as we begin our forever.
+      
+    </p>
+
+    <div class="venue-card">
+      <div class="venue-info">
+        <h3>Ranthambore Grand Mahal</h3>
+        <p class="venue-address">
+          Sawai Madhopur, Rajasthan, India
+        </p>
+        <p class="venue-date">
+          04 December 2026 · 7:00 PM
+        </p>
+
+        <a class="venue-directions"
+           href="https://www.google.com/maps/dir/?api=1&destination=Ranthambore+Grand+Mahal%2C+Sawai+Madhopur%2C+Rajasthan"
+           target="_blank"
+           rel="noopener noreferrer">
+          GET DIRECTIONS ↗
+        </a>
+      </div>
+
+      <div class="venue-map">
+        <iframe
+          src="https://maps.google.com/maps?q=Ranthambore%20Grand%20Mahal%2C%20Sawai%20Madhopur%2C%20Rajasthan&t=&z=14&output=embed"
+          title="Ranthambore Grand Mahal Google Map"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <p class="venue-signature"><br>  </p>
+  </div>
+</section>
+
+
+    <!-- Closing Invitation -->
+    <section class="closing-section section-padding">
+      <div class="closing-flower">❀</div>
+      <p class="section-kicker">YOUR PRESENCE IS OUR PRESENT</p>
+      <h2 class="section-title">
+        Let's make <em>memories</em> together.
+      </h2>
+      <p class="welcome-text">
+        We cannot wait to celebrate this beautiful beginning with you.
+      </p>
+      <p class="script-signature">With love <br> Piyush & Kripansha</p>
+      <a href="#home" class="back-to-top">BACK TO TOP ↑</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    MADE WITH LOVE · PIYUSH ♡ KRIPANSHA
+  </footer>
+
+<!-- Gallery Lightbox -->
+<div
+  class="lightbox"
+  id="galleryLightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Expanded wedding photograph"
+  aria-hidden="true"
+>
+  <button class="lightbox-close" id="lightboxClose"
+    type="button" aria-label="Close photo">×</button>
+
+  <button class="lightbox-arrow previous"
+    id="lightboxPrev" type="button" aria-label="Previous photo">‹</button>
+
+  <img id="lightboxImage" src="" alt="Expanded wedding photograph">
+
+  <button class="lightbox-arrow next"
+    id="lightboxNext" type="button" aria-label="Next photo">›</button>
+
+  <p class="lightbox-counter" id="lightboxCounter"></p>
+</div>
+
+  <script src="index.js"></script>
+</body>
+</html>
